@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+ENV/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# Data files (too large for git)
+*.hdf5
+*.h5
+*.npz
+data/raw/
+data/processed/*.npz
+
+# Model weights (can be large)
+*.pth
+*.pkl
+*.joblib
+saved_models/
+trained_models/
+
+# Visualizations
+*.png
+*.jpg
+*.jpeg
+visualizations/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Project specific
+COMP3020_Project_Report.pdf
+
