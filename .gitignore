@@ -24,10 +24,14 @@ data/raw/
 data/processed/*.npz
 
 # Model weights (can be large)
+# Allow saved_models/ folder
+!saved_models/
 *.pth
+!saved_models/**/*.pth
 *.pkl
+!saved_models/**/*.pkl
 *.joblib
-saved_models/
+!saved_models/**/*.joblib
 trained_models/
 
 # Visualizations
