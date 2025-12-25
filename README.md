@@ -123,7 +123,7 @@ If you use this code in your research, please cite:
 ```bibtex
 @misc{hybrid-statistical-autoencoder-iot-auth,
   title={Hybrid Statistical-Autoencoder Model for Adaptive IoT Node Authentication in 5G Networks},
-  author={Your Name},
+  author={Thu Hoang Anh, Hung Nguyen Le},
   year={2025},
   url={https://github.com/lavonaschaffer/Hybrid-Statistical-Autoencoder-Model-for-Adaptive-IoT-Node-Authentication-in-5GNetworks}
 }
