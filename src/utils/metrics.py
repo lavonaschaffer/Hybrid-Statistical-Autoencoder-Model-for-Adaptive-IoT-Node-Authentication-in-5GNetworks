@@ -227,7 +227,6 @@ class IoTAuthenticationMetrics:
             test_scores = test_scores[np.newaxis]
             
         n_cal = len(self.calibration_scores)
-        p_values =
         
         # Calculate p-value for each test score
         # p(x) = (|{alpha_cal >= alpha_test}| + 1) / (n_cal + 1)
@@ -337,7 +336,7 @@ if __name__ == "__main__":
     
     # 3. Compute Metrics at Specific Operating Point (e.g., Threshold=2.0)
     op_metrics = evaluator.compute_far_frr(y_test_labels, y_test_scores, threshold=2.0)
-    print(f"At threshold=2.0: FAR={op_metrics*100:.2f}%, FRR={op_metrics*100:.2f}%")
+    print(f"At threshold=2.0: FAR={op_metrics['FAR']*100:.2f}%, FRR={op_metrics['FRR']*100:.2f}%")
     
     # 4. State-of-the-Art: Conformal Prediction
     print(f"\n--- Conformal Prediction (ICP) ---")
@@ -352,8 +351,8 @@ if __name__ == "__main__":
     # Remember to negate if using the same logic
     test_val = -1 * 0.0 
     is_anom, p_val = evaluator.predict_conformal(test_val, epsilon=0.05)
-    print(f"Test Sample (Score=0.0): p-value = {p_val:.4f}")
-    print(f"Is Anomaly at 95% confidence? {'Yes' if is_anom else 'No'}")
+    print(f"Test Sample (Score=0.0): p-value = {p_val[0]:.4f}")
+    print(f"Is Anomaly at 95% confidence? {'Yes' if is_anom[0] else 'No'}")
     
     # 5. State-of-the-Art: Calibration Error
     print(f"\n--- Trust Calibration (ECE) ---")
